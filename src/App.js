@@ -1,12 +1,24 @@
-// src/App.js
+
 import React from 'react';
-import './App.css'; // Import your CSS file
+import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Homepage from './pages/homepage';
+import Memberland from './pages/Memberland';
+import Sidebar from './compnents/sidebar';
+
 
 function App() {
   return (
-    <div className="bg-gray-900 p-4 lol">
-      <h1 className=" text-center text-white">Hello, Tailwind CSS!</h1>
-    </div>
+    <>
+   
+
+    <BrowserRouter>
+    <Routes>
+    <Route exact path="/" element={<Homepage />} />
+    <Route path="/pages/Memberland" element={<Memberland />} />
+    </Routes>
+  </BrowserRouter>
+  </>
   );
 }
 
