@@ -1,0 +1,11 @@
+/* src/styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+ 
+body {
+    background-color: rgb(232, 232, 232);
+}
+li{
+    cursor: pointer;
+}
