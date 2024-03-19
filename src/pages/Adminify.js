@@ -5,12 +5,13 @@ import Adjustabletable from '../compnents/adjustabletable'
 import Adminifyoverview from '../compnents/Adminifyoverview'
 
 
-export default function Adminify() {
+export default function Adminify({selectedperson ,setselectedperson}) {
   return (
     <>
-    <div className='flex '>
+    <div className='flex'>
+
  <Sidebar />
-<Adminifyoverview/>
+<Adminifyoverview selectedperson={selectedperson} setselectedperson={setselectedperson} />
  </div>
   </>
   )

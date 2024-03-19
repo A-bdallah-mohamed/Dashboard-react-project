@@ -2,13 +2,16 @@ import React from 'react'
 import Database from "../DB/database.js"
 import { PiDotsThreeCircleLight } from "react-icons/pi";
 import  { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
-export default function Table({selectedRole}) {
+export default function Table({selectedRole ,selectedperson , setselectedperson}) {
 
     
 const [data , setdata] = useState(Database);
 const [filtereddata,setfiltereddata] = useState(Database)
 const [settingmenuon,setsettingmenuon] = useState(false)
+
+
 
 const setting = (index) => {
     if(settingmenuon === index) {
@@ -81,9 +84,11 @@ useEffect(() => {
       <div className={settingmenuon === index ? 'absolute w-[180px] h-[80px] bg-slate-200 mt-28 right-5 z-50 rounded  flex flex-col  py-1 overflow-hidden transition-all duration-300 ease-in-out opacity-100' : 'absolute w-[180px] h-1    bg-slate-200 mt-28 right-5 z-50 rounded  flex flex-col  py-1 overflow-hidden transition-all duration-300 ease-in-out opacity-0'}>
         <div className='h-4 right-0 text-sm px-2 flex justify-end mb-1 '>
             <div onClick={()=>{setsettingmenuon(false)}} className='hover:transition-all hover:duration-200 hover:ease-in-out hover:bg-slate-300 h-5 w-5 rounded-full flex items-center justify-center'>X</div>
-        </div>
-        <div className='text-base px-2 hover:bg-slate-300 py-1 hover:transition-all hover:duration-200 hover:ease-in-out flex items-center justify-center'>Adminify</div>
-      
+        </div>  
+      <Link to='/pages/Adminify'>
+        <div onClick={()=> {setselectedperson(person)}} className='text-base px-2 hover:bg-slate-300 py-1 hover:transition-all hover:duration-200 hover:ease-in-out flex items-center justify-center'>Adminify</div>
+
+        </Link>
       </div>
     </div>
     </div>
