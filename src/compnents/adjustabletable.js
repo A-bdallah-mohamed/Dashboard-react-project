@@ -7,15 +7,21 @@ import { AiOutlineEdit } from "react-icons/ai";
 import { IoTrashOutline } from "react-icons/io5";
 
 
-export default function Adjustabletable({selectedRole}) {
+export default function Adjustabletable({selectedRole ,selectedperson , setselectedperson , data , setdata}) {
 const [isChecked, setIsChecked] = useState(false);
-const [data , setdata] = useState(Database);
-const [filtereddata,setfiltereddata] = useState(Database)
+const [filtereddata,setfiltereddata] = useState(data)
 const [settingmenuon,setsettingmenuon] = useState(false)
 const [checkeditems, setcheckeditems] = useState([]);
 const [deleteicon,setdeleteicon] = useState(false);
 
 
+const deletechecked = () =>{
+  const newfiltered = data.filter(person => !checkeditems.some(selectedpersonn => selectedpersonn.name === person.name))
+  setfiltereddata(newfiltered)
+  setdata(newfiltered)
+  setcheckeditems([])
+  console.log(data)
+}
 
 const handleCheckboxChange = (event,person,index) => {
   const updatedItems = [...checkeditems]
@@ -40,7 +46,7 @@ setcheckeditems(updatedItems)
       else if(checkeditems.length=0){
         setdeleteicon(false)
       }
-console.log('deleteicon is : ', deleteicon , checkeditems.length)
+
     },[checkeditems])
 
     
@@ -72,7 +78,7 @@ console.log('deleteicon is : ', deleteicon , checkeditems.length)
   return (
     <>
     
-    <div className='custom-scrollbar w-[102%] text-xs flex flex-col font-semibold mt-[15px] bg-white  border-b-black border-2 rounded shadow-2xl pb-1 h-[70vh] '>
+    <div className='custom-scrollbar w-[100%] text-xs flex flex-col font-semibold mt-[15px] bg-white  border-b-black border-2 rounded shadow-2xl pb-1 h-[70vh] '>
     <div className='flex items-center w-full h-15   p-3  grid grid-cols-9 gap-10 border-b-black border-2  border-white text-gray-400'>
     <p>Select</p>
     <p className='col-span-2'>Image/Name</p>
@@ -140,8 +146,8 @@ console.log('deleteicon is : ', deleteicon , checkeditems.length)
       
      
     </div>
-    <div className='flex items-center justify-center'>{checkeditems.length > 0 ? <p className={`text-xl ${checkeditems.includes(person) ? 'text-red-500 curser cursor-pointer text-xl' : 'hidden'}`}><IoTrashOutline />
-</p> : <AiOutlineEdit className='cursor-pointer text-lg hover:text-blue-700'/>}
+    <div className='flex items-center justify-center'>{checkeditems.length > 0 ? <p className={`text-xl ${checkeditems.includes(person) ? 'text-red-500 curser cursor-pointer text-xl' : 'hidden'}`}><IoTrashOutline onClick={deletechecked} />
+</p> : <AiOutlineEdit onClick={()=>setselectedperson(person)} className='cursor-pointer text-lg hover:text-blue-700'/>}
 </div>
     </div>
 

@@ -4,11 +4,11 @@ import { PiDotsThreeCircleLight } from "react-icons/pi";
 import  { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
-export default function Table({selectedRole ,selectedperson , setselectedperson}) {
+export default function Table({selectedRole ,selectedperson , setselectedperson,data,setdata}) {
 
     
-const [data , setdata] = useState(Database);
-const [filtereddata,setfiltereddata] = useState(Database)
+
+const [filtereddata,setfiltereddata] = useState(data)
 const [settingmenuon,setsettingmenuon] = useState(false)
 
 

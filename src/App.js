@@ -11,10 +11,11 @@ import Calendar from './pages/Calendar';
 import Accordion from './pages/Accordion';
 import Settings from './pages/Settings';
 import  { useEffect, useState } from 'react'
+import Database from './DB/database';
 
 function App() {
   const [selectedperson, setselectedperson] = useState(null);
-
+  const [data , setdata] = useState(Database);
 
   return (
     <>
@@ -23,8 +24,8 @@ function App() {
     <BrowserRouter>
     <Routes>
     <Route exact path="/" element={<Homepage />} />
-    <Route path="/pages/Memberland" element={<Memberland selectedperson={selectedperson} setselectedperson={setselectedperson}/>} />
-    <Route path="/pages/Adminify" element={<Adminify selectedperson={selectedperson} setselectedperson={setselectedperson} />} />
+    <Route path="/pages/Memberland" element={<Memberland selectedperson={selectedperson} setselectedperson={setselectedperson} data={data} setdata={setdata}/>} />
+    <Route path="/pages/Adminify" element={<Adminify selectedperson={selectedperson} setselectedperson={setselectedperson}  data={data} setdata={setdata}/>} />
     <Route path="/pages/Userinput" element={<Userinput />} />
     <Route path="/pages/Calendar" element={<Calendar />} />
     <Route path="/pages/Accordion" element={<Accordion />} />

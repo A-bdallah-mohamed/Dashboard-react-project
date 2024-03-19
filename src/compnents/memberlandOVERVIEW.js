@@ -4,7 +4,7 @@ import Database from "../DB/database.js"
 import Table from "./table.js"
 import { AiOutlineEdit } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-export default function MemberlandOVERVIEW({selectedperson,setselectedperson}) {
+export default function MemberlandOVERVIEW({selectedperson,setselectedperson,data,setdata}) {
 
  const [selectedRole  ,setselectedRole ] =useState(null);
 
@@ -30,7 +30,7 @@ export default function MemberlandOVERVIEW({selectedperson,setselectedperson}) {
   </div>
   
    </div>
-<Table selectedRole={selectedRole} selectedperson={selectedperson} setselectedperson={setselectedperson}/>
+<Table selectedRole={selectedRole} selectedperson={selectedperson} setselectedperson={setselectedperson} data={data} setdata={setdata}/>
 </div>
 </div>
 </>

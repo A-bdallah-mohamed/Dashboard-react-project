@@ -1,7 +1,7 @@
 import React from 'react'
 import whitelogo from '../logos/black-logo.PNG'
 import { Link , useLocation } from 'react-router-dom';
-
+import { useEffect, useState } from 'react'
 
 export default function Sidebar() {
   const location = useLocation();
