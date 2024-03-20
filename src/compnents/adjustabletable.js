@@ -14,7 +14,6 @@ const [settingmenuon,setsettingmenuon] = useState(false)
 const [checkeditems, setcheckeditems] = useState([]);
 const [deleteicon,setdeleteicon] = useState(false);
 
-
 const deletechecked = () =>{
   const newfiltered = data.filter(person => !checkeditems.some(selectedpersonn => selectedpersonn.name === person.name))
   setfiltereddata(newfiltered)

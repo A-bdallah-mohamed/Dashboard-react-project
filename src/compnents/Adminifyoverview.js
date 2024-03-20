@@ -31,7 +31,7 @@ useEffect(() => {
 
 
 
-<Editableperson selectedperson={selectedperson} setselectedperson={setselectedperson}/>
+<Editableperson selectedperson={selectedperson} setselectedperson={setselectedperson} data={data} setdata={setdata}/>
 
 
 
