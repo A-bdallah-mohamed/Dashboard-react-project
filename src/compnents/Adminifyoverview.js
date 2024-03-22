@@ -39,7 +39,7 @@ useEffect(() => {
 
     <div className='h-[89vh] w-full ml-[25px] mr-[45px]'>
 <div className='font-roboto-condensed font-bold  text-[23px] justify-between flex'>
-    <div className='w-[200px] bg-white pl-5 rounded shadow-2xl'>Member Admin</div>
+    <div className='w-[200px] bg-white rounded shadow-2xl flex items-center justify-center'>Adminify</div>
     <div><button className='w-[200px] flex items-center justify-center bg-lime-400 rounded text-Black shadow-2xl hover:bg-lime-700 hover:' ><Link to='/pages/Userinput'>Add Member +</Link></button> </div>
 </div>
    <div>
