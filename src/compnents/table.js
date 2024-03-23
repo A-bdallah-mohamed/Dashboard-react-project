@@ -86,7 +86,7 @@ useEffect(() => {
             <div onClick={()=>{setsettingmenuon(false)}} className='hover:transition-all hover:duration-200 hover:ease-in-out hover:bg-slate-300 h-5 w-5 rounded-full flex items-center justify-center'>X</div>
         </div>  
       <Link to='/pages/Adminify'>
-        <div onClick={()=> {setselectedperson(person)}} className='text-base px-2 hover:bg-slate-300 py-1 hover:transition-all hover:duration-200 hover:ease-in-out flex items-center justify-center'>Adminify</div>
+        <div onClick={()=> {setselectedperson(person)}} className='text-base px-2 hover:bg-slate-300 py-1 hover:transition-all hover:duration-200 hover:ease-in-out flex items-center justify-center'>Edit employee data</div>
 
         </Link>
       </div>

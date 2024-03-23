@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react'
 import {useState } from 'react'
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { MdErrorOutline } from "react-icons/md";
 
 
 
 export default function Editableperson({selectedperson,setselectedperson, data , setdata}) {
   const [image,setimage] = useState(null)
+ const [iserrortrue,setiserrortrue] = useState(false)
 const [showprocceedmenu,setshowprocceedmenu] = useState(false);
   const [persontoedit,setpersontoedit] = useState({
     img: '',
@@ -46,10 +48,21 @@ console.log('selected person ',selectedperson)
 
   const editperson = (person) => {
     const indexofeditperson = data.indexOf(person)
-    if (indexofeditperson !== -1){
+if(persontoedit.name === '' || persontoedit.age ==='' ||persontoedit.title === '' ||persontoedit.salary === '' ||persontoedit.role === ''){
+setiserrortrue(true)
+setTimeout(() => {
+  setiserrortrue(false)
+}, 3000);
+} 
+
+   
+    else if (indexofeditperson !== -1){
   data.splice(indexofeditperson,1,persontoedit)
     }
+  
   }
+
+
   return (
   
     
@@ -57,11 +70,12 @@ console.log('selected person ',selectedperson)
 <>
 
 
-
-    <div className={selectedperson ? 'font-semibold font-roboto-condensed w-full h-full flex absolute items-center justify-center z-40 transition-width duration-500 ease-in-out' : 'font-semibold font-roboto-condensed ml-[50%] w-[1px] h-[1px] flex absolute items-center justify-center z-50 overflow-hidden pointer-events-none transition-width duration-500 ease-in-out'} >
+<div className={iserrortrue ? `border-2 border-black text-red-500 absolute z-50 top-6 right-5 w-[400px] h-[80px] bg-slate-300 rounded-xl flex items-center justify-center font-semibold font-roboto-condensed transition-all duration-500 ease-in-out ` : 'border-2 border-black text-red-500 absolute z-50 top-[-80px] right-5 w-[400px] h-[80px] bg-slate-300 rounded-xl flex items-center justify-center font-semibold font-roboto-condensed transition-all duration-500 ease-in-out'}>Please add some data   <MdErrorOutline className='ml-[5px] ' />
+</div>
+    <div className={selectedperson ? 'font-semibold font-roboto-condensed w-full h-full flex absolute items-center justify-center z-40 transition-width duration-500 ease-in-out opacity-1' : 'opacity-0 font-semibold font-roboto-condensed ml-[50%] w-[1px] h-full flex absolute items-center justify-center z-40 overflow-hidden pointer-events-none transition-width duration-500 ease-in-out'} >
    
-  
-<div className={showprocceedmenu ? 'rounded-2xl absolute z-40 w-[98%] h-[75vh] border-2 border-black flex items-center justify-center bg-slate-300 transition-width duration-500 ease-in-out overflow-hidden' : 'rounded-2xl z-40  absolute w-[1px] h-[1px]  pointer-events-none transition-width duration-500 ease-in-out overflow-hidden'}>
+ 
+<div className={showprocceedmenu ? 'rounded-2xl absolute z-40 w-[98%] h-[75vh] border-2 border-black flex items-center justify-center bg-slate-300 transition-width duration-500 ease-in-out overflow-hidden opacity-1' : 'flex items-center justify-center opacity-0 rounded-2xl z-40  absolute w-[1px] h-[75vh]  pointer-events-none transition-width duration-500 ease-in-out overflow-hidden'}>
 
 <button onClick={()=>setshowprocceedmenu(false)} className='absolute top-2 right-4 w-[30px] h-[30px] rounded-full bg-white flex items-center justify-center hover:bg-slate-500'>
     X

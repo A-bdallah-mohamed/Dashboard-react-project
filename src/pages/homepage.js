@@ -4,12 +4,12 @@ import Overview from '../compnents/overview'
 
 
 
-export default function Homepage() {
+export default function Homepage({data,setdata}) {
   return (
  <>
      <div className='flex '>
         <Sidebar />
-        <Overview />
+        <Overview data={data} setdata={setdata}/>
      </div>
  </>
   )

@@ -32,14 +32,14 @@ export default function Sidebar() {
        <p>Userinput</p>
         </li>
        </Link>
-       <Link to='/pages/Calendar'>
-         <li className={location.pathname === '/pages/Calendar' ? 'font-semibold flex items-center w-[120px] justify-center h-[35px]	bg-lime-400 rounded-xl hover:bg-lime-700  mb-3 ' : 'font-semibold flex items-center w-[120px] justify-center h-[35px]	 rounded-xl bg-slate-200 text-black mb-3 hover:bg-slate-400 '}>
-       <p>Calendar</p>
+       <Link to='/pages/LOGIN'>
+         <li className={location.pathname === '/pages/LOGIN' ? 'font-semibold flex items-center w-[120px] justify-center h-[35px]	bg-lime-400 rounded-xl hover:bg-lime-700  mb-3 ' : 'font-semibold flex items-center w-[120px] justify-center h-[35px]	 rounded-xl bg-slate-200 text-black mb-3 hover:bg-slate-400 '}>
+       <p>Log-In Page</p>
         </li>
         </Link>
-        <Link to='/pages/Accordion'>
-         <li className={location.pathname === '/pages/Accordion' ? 'font-semibold flex items-center w-[120px] justify-center h-[35px]	bg-lime-400 rounded-xl hover:bg-lime-700  mb-3 ' : 'font-semibold flex items-center w-[120px] justify-center h-[35px]	 rounded-xl bg-slate-200 text-black mb-3 hover:bg-slate-400 '}>
-       <p>Accordion </p>
+        <Link to='/pages/Error'>
+         <li className={location.pathname === '/pages/Error' ? 'font-semibold flex items-center w-[120px] justify-center h-[35px]	bg-lime-400 rounded-xl hover:bg-lime-700  mb-3 ' : 'font-semibold flex items-center w-[120px] justify-center h-[35px]	 rounded-xl bg-slate-200 text-black mb-3 hover:bg-slate-400 '}>
+       <p>Error Page </p>
         </li>
         </Link>
     </ul>

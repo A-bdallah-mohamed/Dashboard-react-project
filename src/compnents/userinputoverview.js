@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiOutlineEdit } from "react-icons/ai";
 import Addauser from './addauser';
-export default function Userinputoverview() {
+export default function Userinputoverview({data,setdata}) {
   return (
     <>
 
@@ -17,7 +17,7 @@ export default function Userinputoverview() {
 
   
    </div>
-<Addauser />
+<Addauser data={data} setdata={setdata} />
 </div>
 </div>
 </>
