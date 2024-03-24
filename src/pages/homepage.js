@@ -4,12 +4,12 @@ import Overview from '../compnents/overview'
 
 
 
-export default function Homepage({data,setdata}) {
+export default function Homepage({data,setdata,mainuser,setmainuser}) {
   return (
  <>
      <div className='flex '>
         <Sidebar />
-        <Overview data={data} setdata={setdata}/>
+        <Overview data={data} setdata={setdata} mainuser={mainuser} setmainuser={setmainuser}/>
      </div>
  </>
   )

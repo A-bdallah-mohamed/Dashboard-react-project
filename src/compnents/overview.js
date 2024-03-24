@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import whitelogo from '../logos/black-logo.PNG'
 import Calendar from 'react-calendar'
-export default function Overview({data,setdata}) {
+export default function Overview({data,setdata,mainuser,setmainuser}) {
 
 
 const firstthreepeople = data.slice(0,5)
@@ -49,7 +49,7 @@ useEffect(()=> {
         <div>Welcome back Abdallah 👋</div>
         <div className='flex items-center'> 
         <button className='middle none center rounded-lg bg-lime-400 py-3 px-6 font-sans text-xs font-bold uppercase text-black shadow-md shadow-lime-600/20 transition-all hover:shadow-lg hover:shadow-lime-500/40 focus:opacity-[0.95] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none mr-[20px]'  data-ripple-light="true">Download Free</button>
-        <div className='min-w-[60px] min-h-[60px] max-w-[60px] max-h-[60px] bg-slate-500 flex items-center justify-center rounded-full bg-cover' />
+        <div className='min-w-[60px] min-h-[60px] max-w-[60px] max-h-[60px] bg-slate-500 flex items-center justify-center rounded-full bg-cover' style={{backgroundImage: `url(${mainuser.img})`}}/>
         </div>
     </div>
 
@@ -71,7 +71,7 @@ useEffect(()=> {
    <p>{person.title}</p>
  </div>
  <div className='flex items-center w-[100px] h-[10px]'>
-   <p>{person.age}</p>
+   <p>{person.age} Yrs</p>
  </div>
  <div className='flex items-center w-[100px] h-[10px]'>
    <p>$ {person.salary}</p>

@@ -17,6 +17,11 @@ export const NewpersontoaddContext = createContext();
 
 function App() {
  
+const [mainuser,setmainuser] = useState({
+  name: '',
+  img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2QYwLJsJgc8srsbncqE7mBGwwOcTe4_fe5SRc-fVAVQ&s'
+})
+
 const [newperson,setnewperson] = useState({
   img: '',
   name: '',
@@ -34,7 +39,7 @@ const [newperson,setnewperson] = useState({
 <NewpersontoaddContext.Provider value={{ newperson,setnewperson }}> 
     <BrowserRouter>
     <Routes>
-    <Route exact path="/" element={<Homepage data={data} setdata={setdata} />} />
+    <Route exact path="/" element={<Homepage data={data} setdata={setdata} mainuser={mainuser} setmainuser={setmainuser}/>} />
     <Route path="/pages/Memberland" element={<Memberland selectedperson={selectedperson} setselectedperson={setselectedperson} data={data} setdata={setdata}/>} />
     <Route path="/pages/Adminify" element={<Adminify selectedperson={selectedperson} setselectedperson={setselectedperson}  data={data} setdata={setdata}/>} />
     <Route path="/pages/Userinput" element={<Userinput data={data} setdata={setdata} />} />
