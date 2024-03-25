@@ -45,7 +45,7 @@ const [newperson,setnewperson] = useState({
     <Route path="/pages/Userinput" element={<Userinput data={data} setdata={setdata} />} />
     <Route path="/pages/LOGIN" element={<LOGIN />} />
     <Route path="/pages/Error" element={<Error />} />
-    <Route path="/pages/Settings" element={<Settings />} />
+    <Route path="/pages/Settings" element={<Settings mainuser={mainuser} setmainuser={setmainuser}/>} />
     </Routes>
   </BrowserRouter>
   </NewpersontoaddContext.Provider>

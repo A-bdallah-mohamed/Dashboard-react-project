@@ -1,12 +1,8 @@
 import React from 'react'
-import Sidebar from '../compnents/sidebar'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { FaFacebookF } from "react-icons/fa";
 import { IoLogoGoogleplus } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa";
-import { IoPersonCircleOutline } from "react-icons/io5";
-import { MdOutlineEmail } from "react-icons/md";
-import { IoLockClosedOutline } from "react-icons/io5";
 
 export default function LOGIN() {
 
@@ -36,7 +32,7 @@ export default function LOGIN() {
   <div className='text-6xl'>Welcome Back! </div>
     <div><br />Enter your personal details and<br />  start your journey with us</div>
   </div>
-  <div onClick={handleclick} className={isitlogin ? `overflow-hidden absolute top-[65%] left-[40%] hover:w-[165px] transition-all duration-1000 ease-in-out whitespace-nowrap bg-lime-400 border-[3px] border-white rounded-2xl w-[155px] h-[40px] hover:h-[50px] hover:bg-lime-200 cursor-pointer` : 'hover:h-[50px] overflow-hidden h-[40px] whitespace-nowrap absolute top-[65%] left-[35%] bg-lime-400 border-[3px] border-white rounded-2xl w-[250px] hover:w-[260px] transition-all duration-1000 ease-in-out hover:bg-lime-200 cursor-pointer' }>
+  <div onClick={handleclick} className={isitlogin ? `overflow-hidden absolute top-[65%] left-[41%] hover:w-[165px] transition-all duration-1000 ease-in-out whitespace-nowrap bg-lime-400 border-[3px] border-white rounded-2xl w-[155px] h-[40px] hover:h-[50px] hover:bg-lime-200 cursor-pointer` : 'hover:h-[50px] overflow-hidden h-[40px] whitespace-nowrap absolute top-[65%] left-[33%] bg-lime-400 border-[3px] border-white rounded-2xl w-[250px] hover:w-[260px] transition-all duration-1000 ease-in-out hover:bg-lime-200 cursor-pointer' }>
     <div className={isitlogin ? 'absolute top-[20%] left-[35%] transition-all duration-1000 ease-in-out' : 'top-[20%] left-[100%] absolute opacity-0 transition-all duration-1000 ease-in-out'}>Sign In</div>
     <div className={isitlogin ? 'top-[20%] right-[100%] absolute opacity-0 transition-all duration-1000 ease-in-out' : 'absolute top-[20%] right-[40%] transition-all duration-1000 ease-in-out'}>Sign Up</div>
   </div>
@@ -52,9 +48,9 @@ export default function LOGIN() {
 <div className={isitlogin ? ` px-[100px] text-center whitespace-nowrap absolute left-[-50%] transition-all duration-1000 ease-in-out` : ' px-[100px] text-center whitespace-nowrap absolute left-[-4%] transition-all duration-1000 ease-in-out'}>
 <div className='text-6xl'>Sign in to StatStation</div>
   <div className='flex items-center justify-center gap-[10px] mt-[25px]'>
-<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full'><FaFacebookF /></div>
-<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full'><IoLogoGoogleplus /></div>
-<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full'><FaLinkedinIn /></div>
+<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full hover:bg-slate-200 cursor-pointer'><FaFacebookF /></div>
+<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full hover:bg-slate-200 cursor-pointer'><IoLogoGoogleplus /></div>
+<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full hover:bg-slate-200 cursor-pointer'><FaLinkedinIn /></div>
   </div>
   <div className='mt-[20px] text-slate-400'>Or use your email accout.</div>
   <form className='flex items-center justify-center flex-col gap-[10px] mt-[10px]'>
@@ -71,9 +67,9 @@ export default function LOGIN() {
 <div className={isitlogin ? ` px-[100px] text-center whitespace-nowrap absolute right-[5%] transition-all duration-1000 ease-in-out` : ' px-[100px] text-center whitespace-nowrap absolute right-[-50%] transition-all duration-1000 ease-in-out'}>
   <div className='text-6xl'>Create Account</div>
   <div className='flex items-center justify-center gap-[10px] mt-[25px]'>
-<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full'><FaFacebookF /></div>
-<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full'><IoLogoGoogleplus /></div>
-<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full'><FaLinkedinIn /></div>
+<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full hover:bg-slate-200 cursor-pointer'><FaFacebookF /></div>
+<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full hover:bg-slate-200 cursor-pointer'><IoLogoGoogleplus /></div>
+<div className='w-[50px] h-[50px] flex items-center justify-center border-[1px] border-black rounded-full hover:bg-slate-200 cursor-pointer'><FaLinkedinIn /></div>
   </div>
   <div className='mt-[20px] text-slate-400'>Or use your email for registration.</div>
   <form className='flex items-center justify-center flex-col gap-[10px] mt-[10px]'>

@@ -46,7 +46,7 @@ useEffect(()=> {
 
           
     <div className='font-roboto-condensed font-bold  text-[23px] justify-between flex items-center'>
-        <div>Welcome back Abdallah 👋</div>
+        <div>Welcome back {mainuser.name} 👋</div>
         <div className='flex items-center'> 
         <button className='middle none center rounded-lg bg-lime-400 py-3 px-6 font-sans text-xs font-bold uppercase text-black shadow-md shadow-lime-600/20 transition-all hover:shadow-lg hover:shadow-lime-500/40 focus:opacity-[0.95] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none mr-[20px]'  data-ripple-light="true">Download Free</button>
         <div className='min-w-[60px] min-h-[60px] max-w-[60px] max-h-[60px] bg-slate-500 flex items-center justify-center rounded-full bg-cover' style={{backgroundImage: `url(${mainuser.img})`}}/>
@@ -129,8 +129,6 @@ useEffect(()=> {
 <div data-ripple-light="true" className='row-span-2 p-5 cursor-pointer bg-slate-300 shadow-md shadow-slate-400 hover:shadow-2xl hover:shadow-slate-600 transition-shadow h-[200px] col-span-2 rounded-xl items-center flex justify-center flex-col '>
   <Calendar onChange={onchange} value={Value}  />
 </div>
-
-
 
 </div>
 
