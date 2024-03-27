@@ -3,6 +3,7 @@ import Sidebar from '../compnents/sidebar'
 import MemberlandOVERVIEW from '../compnents/memberlandOVERVIEW'
 import Adjustabletable from '../compnents/adjustabletable'
 import Adminifyoverview from '../compnents/Adminifyoverview'
+import '../App.css';
 import { useEffect, useState } from 'react'
 
 export default function Adminify({selectedperson ,setselectedperson,data,setdata}) {

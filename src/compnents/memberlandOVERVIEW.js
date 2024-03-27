@@ -4,6 +4,7 @@ import Database from "../DB/database.js"
 import Table from "./table.js"
 import { AiOutlineEdit } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import '../App.css';
 export default function MemberlandOVERVIEW({selectedperson,setselectedperson,data,setdata}) {
 
  const [selectedRole  ,setselectedRole ] =useState(null);

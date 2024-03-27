@@ -1,13 +1,14 @@
 import React from 'react'
 import Sidebar from '../compnents/sidebar'
 import { useEffect, useState  } from 'react'
+import '../App.css';
 import { Link } from 'react-router-dom'
 export default function Error() {
   return (
     <div className='flex '>
    
-<div className='w-full h-[100vh] bg-slate-200 flex items-center justify-center flex-col gap-0 font-roboto-condensed bg-white '>
-<div className='w-[500px] flex flex-col items-center justify-center text-center'>
+<div className='w-full h-[100vh]  flex items-center justify-center flex-col gap-0 font-roboto-condensed bg-white '>
+<div className='error w-[500px] flex flex-col items-center justify-center text-center'>
 <div className='font-bold text-8xl'>404</div>  
 <div className='font-semibold text-2xl'>Oops!, Page not Found </div>
 

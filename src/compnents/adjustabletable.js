@@ -5,7 +5,7 @@ import { PiDotsThreeCircleLight } from "react-icons/pi";
 import  { useEffect, useState } from 'react'
 import { AiOutlineEdit } from "react-icons/ai";
 import { IoTrashOutline } from "react-icons/io5";
-
+import '../App.css';
 
 export default function Adjustabletable({selectedRole ,selectedperson , setselectedperson , data , setdata}) {
 const [isChecked, setIsChecked] = useState(false);
@@ -78,10 +78,10 @@ setcheckeditems(updatedItems)
     <>
     
     <div className='custom-scrollbar w-[100%] text-xs flex flex-col font-semibold mt-[15px] bg-white  border-b-black border-2 rounded shadow-2xl pb-1 h-[70vh] '>
-    <div className='flex items-center w-full h-15   p-3  grid grid-cols-9 gap-10 border-b-black border-2  border-white text-gray-400'>
+    <div className=' items-center w-full h-15   p-3  grid grid-cols-9 gap-10 border-b-black border-2  border-white text-gray-400'>
     <p>Select</p>
-    <p className='col-span-2'>Image/Name</p>
-    <p className='col-span-2'>Title</p>
+    <p className='nameimggrid col-span-2'>Image/Name</p>
+    <p className='nameimggridlol col-span-2'>Title</p>
     <p>Age</p>
     <p>Salary</p>
     <p>Role</p>
@@ -95,11 +95,11 @@ setcheckeditems(updatedItems)
         <>
    
     
-    <div key={person} className={`px-3 py-3 grid grid-cols-9 gap-10 hover:bg-slate-100 relative  ${checkeditems.includes(person) ? 'bg-slate-300 hover:bg-slate-300' : ''}`}>
+    <div key={person} className={`tablecsstwo px-3 py-3 grid grid-cols-9 gap-10 hover:bg-slate-100 relative  ${checkeditems.includes(person) ? 'bg-slate-300 hover:bg-slate-300' : ''}`}>
     <div className='flex items-center justify-center'>
     <input type='checkbox' checked={checkeditems.includes(person)} onChange={(e)=>{handleCheckboxChange(e,person,index)}}></input>
     </div>
-    <div className='flex items-center  col-span-2 '>
+    <div className='nameimggrid flex items-center  col-span-2 '>
    
     <div className='min-w-8 min-h-8 bg-slate-500 rounded-full mr-1 bg-cover' 
     style={{backgroundImage:`url(${person.img})`}}

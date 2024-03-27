@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '../compnents/sidebar'
 import Overview from '../compnents/overview'
-
+import '../App.css';
 
 
 export default function Homepage({data,setdata,mainuser,setmainuser}) {

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import {useState } from 'react'
+import '../App.css';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { MdErrorOutline } from "react-icons/md";
 

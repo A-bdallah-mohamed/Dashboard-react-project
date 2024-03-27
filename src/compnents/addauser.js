@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { NewpersontoaddContext } from "../App"
 import { MdErrorOutline } from "react-icons/md";
-
+import '../App.css';
 export default function Addauser({data,setdata}) {
   const [iserrortrue,setiserrortrue] = useState(false)
   const { newperson, setnewperson } = useContext(NewpersontoaddContext);
@@ -49,7 +49,7 @@ useEffect(() => {
     <>
   <div className={iserrortrue ? `text-red-500 absolute z-50 top-6 right-5 w-[400px] h-[80px] bg-slate-300 border-2 border-black rounded-xl flex items-center justify-center font-semibold font-roboto-condensed transition-all duration-500 ease-in-out ` : 'text-red-500 absolute z-50 top-[-80px] right-5 w-[400px] h-[80px] bg-slate-300 border-2 border-black rounded-xl flex items-center justify-center font-semibold font-roboto-condensed transition-all duration-500 ease-in-out'}>Please add some data   <MdErrorOutline className='ml-[5px] ' />
 </div>
-<div className='relative w-full mt-[20px] flex gap-[40px] font-semibold font-roboto-condensed justify-center items-center'>
+<div className='flexcloumnn  relative w-full mt-[20px] flex gap-[40px] font-semibold font-roboto-condensed justify-center items-center'>
   <div className={issubmitshow ? `absolute w-[100%] h-[100%] bg-slate-400 rounded-lg flex  items-center justify-center gap-[100px] transition-width duration-500 ease-in-out opacity-1 overflow-auto` : 'opacity-0 absolute w-1 pointer-events-none h-[100%] bg-slate-400 rounded-lg flex  items-center justify-center gap-[100px] overflow-hidden transition-width duration-500 ease-in-out'}>
  
 <button onClick={()=>setissubmitshow(false)} className='absolute top-2 right-4 w-[30px] h-[30px] rounded-full bg-white flex items-center justify-center hover:bg-slate-500'>
@@ -91,7 +91,7 @@ useEffect(() => {
 
 
   </div>
-<div className='w-[70%] bg-slate-300 h-[80vh] rounded-xl flex flex-col items-center '>
+<div className='fllwdth w-[70%] bg-slate-300 h-[80vh] rounded-xl flex flex-col items-center '>
 
 <div className='px-[10px] flex items-center justify-center h-[40px] mt-[10px] bg-slate-200 rounded-xl'>Enter New User Data</div>
 <div className='min-w-[120px] min-h-[120px] max-w-[120px] max-h-[120px] bg-slate-500 flex items-center justify-center rounded-full bg-cover mt-[20px]' style={{ backgroundImage: `url(${newperson.img})` }} >
@@ -122,7 +122,7 @@ useEffect(() => {
  <button onClick={()=> setissubmitshow(true)} className='mt-[30px] w-[80px] h-[40px] border-2 border-black bg-lime-400 flex items-center justify-center rounded hover:bg-lime-600 '>Submit</button>
 </div>
 <div><FaLongArrowAltRight className='text-green-600'/></div>
-     <div className='w-[30%] bg-slate-300 h-[80vh] rounded-xl flex flex-col items-center '>
+     <div className='fllwdth w-[30%] bg-slate-300 h-[80vh] rounded-xl flex flex-col items-center '>
 
            <div className='px-[10px] flex items-center justify-center h-[40px] mt-[10px] bg-slate-200 rounded-xl'>New User Display</div>
            <div className='min-w-[120px] min-h-[120px] max-w-[120px] max-h-[120px] bg-slate-500 flex items-center justify-center rounded-full bg-cover mt-[20px]' style={{ backgroundImage: `url(${newperson.img})` }} />

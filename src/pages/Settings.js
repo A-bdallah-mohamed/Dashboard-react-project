@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '../compnents/sidebar'
 import { useEffect, useState } from 'react'
-
+import '../App.css';
 export default function Settings({mainuser,setmainuser}) {
   useEffect(()=> {
     console.log(mainuser)
@@ -42,7 +42,7 @@ const handleuserinfodata = () => {
 <div className='font-roboto-condensed font-bold  text-[23px]  flex items-center justify-center'>
     <div className='w-[200px] bg-white  rounded shadow-2xl flex items-center justify-center top-0'>User Info</div>
 </div>
-<div className='w-[95%] h-[99%] bg-slate-300 rounded-xl flex flex-col items-center'>
+<div className='wdthflll w-[95%] h-[99%] bg-slate-300 rounded-xl flex flex-col items-center'>
 
 
 
@@ -64,7 +64,7 @@ const handleuserinfodata = () => {
 
 
 
-<div className='grid grid-cols-4 grid-rows-4 gap-x-[100px]  mt-[50px]'>
+<div className='grid grid-cols-4 columngap grid-rows-4 gap-x-[100px]  mt-[50px]'>
 
 <div className='col-span-2'>
     <div className='ml-[5px] text-slate-500'>Email Address : </div>

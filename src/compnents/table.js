@@ -3,7 +3,7 @@ import Database from "../DB/database.js"
 import { PiDotsThreeCircleLight } from "react-icons/pi";
 import  { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-
+import '../App.css';
 export default function Table({selectedRole ,selectedperson , setselectedperson,data,setdata}) {
 
     
@@ -47,7 +47,7 @@ useEffect(() => {
   return (
     <>
     <div className='text-xs flex flex-col font-semibold mt-[15px] bg-white  border-b-black border-2 rounded shadow-2xl pb-1 h-[70vh] '>
-    <div className='flex items-center w-full h-15   p-3  grid grid-cols-5 gap-2 border-b-black border-2  border-white text-gray-400'>
+    <div className='tablecss items-center w-full h-15   p-3  grid grid-cols-5 gap-2 border-b-black border-2  border-white text-gray-400'>
     <p>Image/Name</p>
     <p>Title</p>
     <p>Age</p>
@@ -60,7 +60,7 @@ useEffect(() => {
     
     {filtereddata.map((person, index) => (
     
-    <div className='px-3 py-3 grid grid-cols-5 gap-2 hover:bg-slate-100 relative'>
+    <div className='tablecss px-3 py-3 grid grid-cols-5 gap-2 hover:bg-slate-100 relative'>
     <div className='flex items-center'>
     <div className='min-w-8 min-h-8 bg-slate-500 rounded-full mr-1 bg-cover' 
     style={{backgroundImage:`url(${person.img})`}}

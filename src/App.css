@@ -2,32 +2,133 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
- 
-body {
-    background-color: rgb(232, 232, 232);
+
+@media screen and (max-width: 600px) {
+    .sidebar{
+margin: 5px;
+height: 99%;
+
+    }
+  .gridoverview {
+    grid-template-columns: auto;
+    display: grid;
 }
-li{
-    cursor: pointer;
+.overviewtable{
+    font-size: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: auto auto auto
 }
-/* CSS */
-/* Define scrollbar styles */
-::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-  }
+.displaynone{
+display: none;
+}
+.smalltext{
+    font-size: 15px;
+}
+.smallxtext{
+    font-size: 12px;
+}
+.smalltexttitle{
+    font-size: 25px;
+}
+.tablecss{
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.tablecsstwo{
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+}
+.nameimggrid{
+    grid-column: span 3;
+}
+.nameimggridlol{
+    grid-column: span 1;
+}
+.flexcloumnn{
+    flex-direction: column;
+}
+.fllwdth{
+    width: 110%;
+}
+.rightedit1{
+right: 6%;
+}
+.rightwelcome{
+    left: 10%;
+}
+.truebtnedit{
+    left: 12%;
+    width: 155px;
+}
+.falsebtnsignup{
+    right: 35%;
+}
+.falsebtnedit{
+    left: 10%;
+   width: 155px;
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color of the scrollbar track */
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; /* Color of the scrollbar handle */
-    border-radius: 4px; /* Border radius of the scrollbar handle */
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color of the scrollbar handle on hover */
-  }
-  
+}
+.falsebtnedit:hover{
+    width: 155px;
+}
+.logintrueedit{
+    right: 0;
+    padding-right: 0;
+}
+.createfalse{
+    right: -100%;
+}
+.error{
+    width: 250px;
+}
+.wdthflll{
+    width: 120%;
+}
+.columngap{
+    column-gap: 10px; 
+}
+.signintrue{
+    left: -100%;
+}
+.inputedit{
+    width: 100px;
+}
+.signinfalse{
+    left: 0;
+    padding-left: 0;
+}
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
+    .sidebar{
+    margin: 5px;
+    height: 99%;
+    
+    }
+.gridoverview {
+    grid-template-columns: auto;
+    display: grid;
+}
+.overviewtable{
+    font-size: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: auto auto auto
+}
+.displaynone{
+    display: none;
+}
+.smalltext{
+    font-size: 15px;
+}
+.tablecss{
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.tablecsstwo{
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+}
+}
+

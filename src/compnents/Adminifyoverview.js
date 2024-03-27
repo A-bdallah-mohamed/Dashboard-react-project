@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Adjustabletable from './adjustabletable'
 import { Link } from 'react-router-dom';
 import Editableperson from './editableperson';
-
+import '../App.css';
 
 export default function Adminifyoverview({selectedperson,setselectedperson, data , setdata}) {
     

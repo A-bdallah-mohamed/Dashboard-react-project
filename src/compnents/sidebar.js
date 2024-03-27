@@ -2,14 +2,14 @@ import React from 'react'
 import whitelogo from '../logos/black-logo.PNG'
 import { Link , useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react'
-
+import '../App.css';
 export default function Sidebar() {
   const location = useLocation();
 
   return (
     <>
     <div className='h-[100vh] flex items-center '>
-    <div className=' relative  shadow-2xl overflow-hidden flex flex-col w-[155px] h-[90vh] ml-[35px] items-center gap-[25px] bg-black px-4 py-5 rounded-md '>
+    <div className='sidebar relative  shadow-2xl overflow-hidden flex flex-col w-[155px] h-[90vh] ml-[35px] items-center gap-[25px] bg-black px-4 py-5 rounded-md '>
     <img src={whitelogo}></img>
     <ul className='text-white font-roboto-condensed'>
       <Link to='/'>
